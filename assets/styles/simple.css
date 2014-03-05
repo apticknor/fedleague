@@ -1,0 +1,130 @@
+/* ---------------------------------------------------------------------
+Original Author: Anthony Ticknor
+Contributors: No Others Yet
+
+Target Browsers: IE8 and down
+Media Type: Screen, Projection
+Width: All Sizes
+------------------------------------------------------------------------ */
+
+/* ---------------------------------------------------------------------
+ Reset Styles
+------------------------------------------------------------------------ */
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+:focus {
+    outline: 0;
+}
+
+/* Always show a vertical scrollbar, even when there is no scrolling */
+html {
+    overflow-y: scroll;
+}
+
+/* Remove scrollbars from textareas */
+textarea {
+    overflow: auto;
+}
+
+/* Don't let iOS and WinMobile mobile-optimize text for you */
+html {
+    -webkit-text-size-adjust: none;
+    -ms-text-size-adjust: none;
+}
+
+/* Improve image quality when scaled in IE7 */
+img {
+    -ms-interpolation-mode: bicubic;
+}
+
+/* ---------------------------------------------------------------------
+ Global Styles
+------------------------------------------------------------------------ */
+body {
+    background: #f2f2f2;
+    color: #939598;
+    font-family: Georgia, Utopia, Palatino, 'Palatino Linotype', serif;
+    font-size: 16px;
+    line-height: 1.4;
+    font-weight: normal;
+    -webkit-font-smoothing: antialiased;
+}
+
+a {
+    color: #cc3478;
+    text-decoration: none;
+    -webkit-transition: all 0.25s;
+    -moz-transition: all 0.25s;
+    transition: all 0.25s;
+}
+
+a:hover {
+
+}
+
+img {
+    max-width: 100%;
+}
+
+::-moz-selection{
+    text-shadow: none;
+    background: #4d4d4f;
+    color: #fff;
+}
+
+::selection {
+    text-shadow: none;
+    background: #4d4d4f;
+    color: #fff;
+}
+
+/* ---------------------------------------------------------------------
+ Masthead
+------------------------------------------------------------------------ */
+.league-logo {
+    padding: 2px 0;
+    text-align: center;
+}
+
+.league-summary {
+    padding: 20px;
+    border-top: 1px dashed #b1b3b6;
+    border-bottom: 1px dashed #b1b3b6;
+}
+
+/* ---------------------------------------------------------------------
+ Grid Layout
+------------------------------------------------------------------------ */
+.wrapper {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* ---------------------------------------------------------------------
+ footer
+------------------------------------------------------------------------ */
+.footer {
+    margin: 12px 0;
+}
+
+/* ---------------------------------------------------------------------
+ Events
+------------------------------------------------------------------------ */
+.event-list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.event-list li {
+    margin: 0;
+    padding: 0;
+}
+
+.event-description {
+    padding: 20px 0 16px 0;
+    border-bottom: 1px dashed #b1b3b6;
+}

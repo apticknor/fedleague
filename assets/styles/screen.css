@@ -1,0 +1,508 @@
+/* ---------------------------------------------------------------------
+RESET CSS
+
+Target Browsers: All
+Media Type: Screen
+Author: Eric Meyer
+URL: http://meyerweb.com/eric/tools/css/reset/
+Version: 2.0
+------------------------------------------------------------------------ */
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font-weight: inherit;
+    font-style: inherit;
+    font-family: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+:focus {
+    outline: 0;
+}
+
+/* Always show a vertical scrollbar, even when there is no scrolling */
+html {
+    overflow-y: scroll;
+}
+
+/* Remove scrollbars from textareas */
+textarea {
+    overflow: auto;
+}
+
+/* Don't let iOS and WinMobile mobile-optimize text for you */
+html {
+    -webkit-text-size-adjust: none;
+    -ms-text-size-adjust: none;
+}
+
+/* Improve image quality when scaled in IE7 */
+img {
+    -ms-interpolation-mode: bicubic;
+}
+
+/* ---------------------------------------------------------------------
+Original Author: Anthony Ticknor
+Contributors: Dan Piscitiello
+
+Target Browsers: All
+Media Type: Screen, Projection
+Width: All Sizes
+------------------------------------------------------------------------ */
+
+/* ---------------------------------------------------------------------
+ Fonts
+------------------------------------------------------------------------ */
+@font-face {
+    font-family: 'ChunkFiveRegular';
+    src: url('../fonts/chunkfive/Chunkfive-webfont.eot');
+    src: url('../fonts/chunkfive/Chunkfive-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/chunkfive/Chunkfive-webfont.woff') format('woff'),
+         url('../fonts/chunkfive/Chunkfive-webfont.ttf') format('truetype'),
+         url('../fonts/chunkfive/Chunkfive-webfont.svg#ChunkFiveRegular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'LeagueGothicRegular';
+    src: url('../fonts/leaguegothic/League_Gothic-webfont.eot');
+    src: url('../fonts/leaguegothic/League_Gothic-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/leaguegothic/League_Gothic-webfont.woff') format('woff'),
+         url('../fonts/leaguegothic/League_Gothic-webfont.ttf') format('truetype'),
+         url('../fonts/leaguegothic/League_Gothic-webfont.svg#LeagueGothicRegular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+/* ---------------------------------------------------------------------
+ Global Styles
+------------------------------------------------------------------------ */
+html {
+    height: 100%;
+    background: #f2f2f2;
+}
+
+body {
+    height: 100%;
+    position: relative;
+    z-index: -10;
+    color: #77797d;
+    background-image: -webkit-gradient(linear, left top, right top, from(#cc3478), to(#e789af), color-stop(0.5, #cc3478), color-stop(0.5, #e789af));
+    background-image: -webkit-linear-gradient(0, #cc3478 50%, #e789af 50%);
+    background-image: -moz-linear-gradient(0, #cc3478 50%, #e789af 50%);
+    background-image: linear-gradient(0, #cc3478 50%, #e789af 50%);
+    background-position: -25% 0;
+    -webkit-background-size: 54px 6px;
+    -moz-background-size: 54px 6px;
+    background-size: 54px 6px;
+    background-repeat: repeat-x;
+    font-family: Georgia, Utopia, Palatino, 'Palatino Linotype', serif;
+    font-size: 16px;
+    line-height: 1.4;
+    font-weight: normal;
+    -webkit-font-smoothing: antialiased;
+}
+
+body:after {
+    content: '';
+    position: absolute;
+    top: 6px;
+    left: 0;
+    height: 226px;
+    width: 100%;
+    background-image: -webkit-gradient(linear, 0 0, 0 100%, from(rgba(20,20,20,.08)), to(transparent));
+    background-image: -webkit-linear-gradient(top, rgba(20,20,20,.08), transparent);
+    background-image: -moz-linear-gradient(top, rgba(20,20,20,.08), transparent);
+    background-image: linear-gradient(top, rgba(20,20,20,.08), transparent);
+    z-index: -1;
+}
+
+a {
+    color: #cc3478;
+    text-decoration: none;
+    -webkit-transition: all 0.25s;
+    -moz-transition: all 0.25s;
+    transition: all 0.25s;
+}
+
+a:hover {
+
+}
+
+img {
+    max-width: 100%;
+}
+
+::-moz-selection{
+    text-shadow: none;
+    background: #4d4d4f;
+    color: #fff;
+}
+
+::selection {
+    text-shadow: none;
+    background: #4d4d4f;
+    color: #fff;
+}
+
+/* ---------------------------------------------------------------------
+ Utility Classes
+------------------------------------------------------------------------ */
+.hidden {
+    position: absolute;
+    left: -99999px;
+}
+
+.wrap404 {
+    margin: 100px 0 20px 0;
+    text-align: center;
+    z-index: 99999999;
+}
+
+.h404 {
+    font-family: 'ChunkFiveRegular';
+    font-size: 40px;
+}
+
+
+/* ---------------------------------------------------------------------
+ Masthead
+------------------------------------------------------------------------ */
+.masthead {
+    margin-bottom: 20px;
+}
+
+.league-logo {
+    padding: 2px 0;
+    text-align: center;
+}
+
+.league-summary {
+    font-family: 'ChunkFiveRegular';
+    font-size: 18px;
+    padding: 20px;
+    text-align: center;
+    border-top: 1px dashed #b1b3b6;
+    border-bottom: 1px dashed #b1b3b6;
+}
+
+/* ---------------------------------------------------------------------
+ Footer
+------------------------------------------------------------------------ */
+.footer {
+    background: #e3e3e3;
+    position: relative;
+    border-top: 1px solid #bbb;
+    padding: 12px 0;
+    min-height: 20px;
+    font-size: 12px;
+    line-height: 1.4;
+}
+
+.footer::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 6px;
+    width: 100%;
+    background-image: -webkit-gradient(linear, 0 0, 0 100%, from(rgba(0,0,0,.1)), to(transparent));
+    background-image: -webkit-linear-gradient(top, rgba(0,0,0,.1), transparent);
+    background-image: -moz-linear-gradient(top, rgba(0,0,0,.1), transparent);
+    background-image: linear-gradient(top, rgba(0,0,0,.1), transparent);
+}
+
+.footer .wrapper {
+    overflow: hidden;
+}
+
+.inner-wrapper {
+    float: left;
+}
+
+.social-media {
+    margin-top: 6px;
+    float: right;
+}
+
+.social-media li {
+    display: inline-block;
+}
+
+.social-media a {
+    color: #939598;
+    height: 20px;
+    display: inline-block;
+    line-height: 20px;
+    opacity: .5;
+    text-indent: -99999px;
+}
+
+.social-media a:hover {
+    color: #cc3478;
+    opacity: 1;
+}
+
+.social-media .twitter a {
+    background: transparent url(../images/icon-twitter.png) no-repeat left center;
+    padding-left: 34px;
+}
+
+.social-media .facebook a {
+    background: transparent url(../images/icon-facebook.png) no-repeat left center;
+    padding-left: 20px;
+}
+
+/* ---------------------------------------------------------------------
+ Grid Layout
+------------------------------------------------------------------------ */
+.wrapper {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 6px 20px 0;
+}
+
+/* ---------------------------------------------------------------------
+ Events
+------------------------------------------------------------------------ */
+.event-speaker {
+    font-family: 'ChunkFiveRegular';
+    font-size: 18px;
+    color: #cc3478;
+    margin-bottom: 4px;
+}
+
+.event-image {
+    border: 3px solid #fff;
+    float: left;
+    margin-right: 12px;
+    line-height: 0;
+}
+
+.event-heading {
+    display: block;
+    background: #4d4d4f;
+    color: #fff;
+    font-family: 'ChunkFiveRegular';
+    font-size: 16px;  
+    text-align: center;
+    padding: 12px 0;
+    border-right: 1px solid #f6f6f6;
+    border-bottom: 1px solid #f6f6f6;
+    -webkit-box-shadow: 5px 5px 0px #cc3478;
+    -moz-box-shadow: 5px 5px 0px #cc3478;
+    box-shadow: 5px 5px 0px #cc3478;
+}
+
+.event-sub-heading {
+    display: block;
+    color: #4d4d4f;
+    font-family: 'ChunkFiveRegular';
+    font-size: 16px;  
+}
+
+.event-heading .day {
+    position: absolute;
+    left: -99999px;
+}
+
+.event-description {
+    padding: 20px 0 16px 0;
+    margin-bottom: 24px;
+    overflow: hidden;
+    border-bottom: 1px dashed #b1b3b6;
+}
+
+.event-list li:last-child .event-description {
+    border-bottom: none;
+    margin-bottom: 0;
+}
+
+.event-meta {
+    overflow: hidden;
+    margin: 12px 0 8px 0;
+    font-family: 'LeagueGothicRegular';
+    font-size: 18px;
+}
+
+.event-meta li {
+    float: left;
+    margin-right: 26px;
+}
+
+.event-meta a {
+    color: #939598;
+    height: 18px;
+    display: inline-block;
+    line-height: 18px;
+}
+
+.event-meta a:hover {
+    color: #cc3478;
+}
+
+.event-meta .twitter a {
+    background: transparent url(../images/icon-twitter.png) no-repeat left center;
+    padding-left: 34px;
+}
+
+.event-meta .website a {
+    background: transparent url(../images/icon-website.png) no-repeat left center;
+    padding-left: 30px;
+}
+
+.event-meta .rsvp a {
+    background: transparent url(../images/icon-rsvp.png) no-repeat left center;
+    padding-left: 24px;
+}
+
+/* ---------------------------------------------------------------------
+360 pixels - Overrides
+------------------------------------------------------------------------ */
+@media only screen and (min-width: 360px) {
+    
+    .event-heading .day {
+        position: static;
+        left: auto;
+    }
+}
+
+/* ---------------------------------------------------------------------
+ 480 pixels - Overrides
+------------------------------------------------------------------------ */
+@media only screen and (min-width: 480px) {
+
+    .league-logo {
+        padding: 16px 0;
+    }
+    
+    .event-speaker {
+        font-size: 24px;
+    }
+    
+    .event-image {
+        margin-right: 16px;
+    }
+    
+    .event-details {
+        overflow: hidden;
+        zoom: 1;
+    }
+    
+    .event-heading {
+        font-size: 22px;  
+    }
+    
+    .event-description {
+        padding: 26px 0 22px 0;
+    }
+       
+    .break {
+        position: relative;
+    }
+    
+    .break::before {
+        content: '<!';
+        position: absolute;
+        left: 0;
+        bottom: -7px;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 14px;
+        line-height: 1;
+        font-weight: normal;
+        color: #c3c5c8;
+        background: #f2f2f2;
+        z-index: 999;
+    }
+    
+    .break::after {
+        content: '>';
+        position: absolute;
+        right: -4px;
+        bottom: -7px;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 14px;
+        line-height: 1;
+        font-weight: normal;
+        color: #c3c5c8;
+        background: #f2f2f2;
+        z-index: 999;
+    }
+
+    .event-list li:last-child .break::before,
+    .event-list li:last-child .break::after {
+        content: '';
+    }
+    
+}
+
+/* ---------------------------------------------------------------------
+ 768 pixels - Overrides
+------------------------------------------------------------------------ */
+@media only screen and (min-width: 768px) {
+
+    .masthead {
+        margin-bottom: 24px;
+    }
+    
+    .league-logo {
+        padding: 24px 0;
+    }
+    
+    .league-summary {
+        line-height: 1.6;
+        padding: 24px 20px;
+    }
+    
+    .event-speaker {
+        font-size: 32px;
+    }
+    
+    .event-image {
+        margin-right: 24px;
+    }
+    
+    .event-heading {
+        font-size: 30px;  
+    }
+
+}
