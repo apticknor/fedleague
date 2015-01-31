@@ -1,5 +1,6 @@
-<ol class="event-list">
 <!--
+<ol class="event-list">
+
     <li>
         <article class="event break">
             <h2 class="event-heading">
@@ -142,7 +143,7 @@
             </div>
         </article>
     </li>
--->
+
     <li>
         <article class="event break">
             <h2 class="event-heading">
@@ -166,3 +167,4 @@
     </li>
 
 </ol>
+-->
